@@ -41,22 +41,6 @@ public class NaveEspacial implements Comparable<NaveEspacial> {
     }
     
     
-     public String toCSV(){
-        return id + "," + nombre + "," + categoria.toString() + "," + capacidad;
-    }
+     
     
-    public static NaveEspacial fromCSV(String empleadoCSV){
-        NaveEspacial toReturn = null;
-        String[] values = empleadoCSV.split(",");
-            if(values.length == 4){
-                
-                int id = Integer.parseInt(values[0]);
-                String nombre = values[1];
-                Categoria categoria = Categoria.valueOf(values[2]);
-                int capacidad = Integer.parseInt(values[3]);
-
-                toReturn = new NaveEspacial(id, nombre, capacidad, categoria);
-            }
-            return toReturn;
-    }
 }
